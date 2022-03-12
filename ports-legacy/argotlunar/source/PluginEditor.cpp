@@ -515,7 +515,7 @@ PluginEditor::PluginEditor (Plugin* const ownerFilter)
     param_display->setCaretVisible (false);
     param_display->setPopupMenuEnabled (false);
     param_display->setColour (TextEditor::textColourId, Colours::black);
-    param_display->setText (String::empty);
+    param_display->setText (String());
 
     addAndMakeVisible (filtertype_combobox = new ComboBox (String()));
     filtertype_combobox->setEditableText (false);
@@ -565,11 +565,11 @@ PluginEditor::PluginEditor (Plugin* const ownerFilter)
     addAndMakeVisible (program_combobox = new ComboBox (String()));
     program_combobox->setEditableText (true);
     program_combobox->setJustificationType (Justification::centredLeft);
-    program_combobox->setTextWhenNothingSelected (String::empty);
+    program_combobox->setTextWhenNothingSelected (String());
     program_combobox->setTextWhenNoChoicesAvailable (L"(no choices)");
     program_combobox->addListener (this);
 
-    addAndMakeVisible (label25 = new Label (String::empty,
+    addAndMakeVisible (label25 = new Label (String(),
                                             L"Argotlunar v2.0.6"));
     label25->setFont (Font (16.0000f, Font::plain));
     label25->setJustificationType (Justification::centredLeft);
@@ -895,7 +895,7 @@ PluginEditor::PluginEditor (Plugin* const ownerFilter)
     scalekey_display->setColour (TextEditor::textColourId, Colours::white);
     scalekey_display->setColour (TextEditor::backgroundColourId, Colour (0xff060827));
     scalekey_display->setColour (TextEditor::outlineColourId, Colour (0xff3c3c54));
-    scalekey_display->setText (String::empty);
+    scalekey_display->setText (String());
 
     addAndMakeVisible (trans_toggle_button = new ToggleButton (String()));
     trans_toggle_button->addListener (this);
