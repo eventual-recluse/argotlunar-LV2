@@ -106,8 +106,8 @@ void Plugin::processBlock(AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
     if (getNumInputChannels() != 2 && getNumOutputChannels() != 2) {
         return;
     }
-    float* chan1 = buffer.getSampleData(0);
-    float* chan2 = buffer.getSampleData(1);
+    float* chan1 = buffer.getWritePointer(0);
+    float* chan2 = buffer.getWritePointer(1);
     int sampleframes = buffer.getNumSamples();
     int blocks = sampleframes / kInternalBlocksize;
 
