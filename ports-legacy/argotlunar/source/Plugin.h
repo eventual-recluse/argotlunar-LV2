@@ -39,7 +39,7 @@ public:
     void getStateInformation (MemoryBlock& destData);
     void setStateInformation (const void* data, int sizeInBytes);
     void setCurrentProgram(int index);
-    void setPlayHead(AudioPlayHead *const newPlayHead);
+    //void setPlayHead(AudioPlayHead *const newPlayHead);
     int getNumParameters();
     bool acceptsMidi() const;
     const String getInputChannelName (int channelIndex) const;
